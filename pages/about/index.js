@@ -1,5 +1,12 @@
 const About = () => {
-  return <h1>About Page</h1>;
+  return (
+    <>
+      <Layout>
+        <Courses />
+        <Mentors />
+      </Layout>
+    </>
+  );
 };
 
 export default About;
