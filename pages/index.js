@@ -5,10 +5,12 @@ import Layout from "../src/components/layout/layout";
 export default function Home({ post }) {
   return (
     <>
+      <Head>
+        <title>Bushro academy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Layout>
-        <main>
-          <h1>Main</h1>
-        </main>
+        <main></main>
       </Layout>
     </>
   );

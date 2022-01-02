@@ -1,0 +1,80 @@
+.header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #888;
+}
+
+.header__nav {
+  width: 70%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-list {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header__list-item {
+  padding: 0 15px;
+  border-bottom: 2px solid transparent;
+}
+
+.header__link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  color: #cacac3;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: transparent;
+}
+.header__list-item:hover:not(:last-child) .header__link::after {
+  transition: 0.6s;
+  background-color: #edd605;
+}
+
+.tel-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 0.5s;
+
+  span {
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+}
+
+.tel-number:hover {
+  color: #edd605;
+}
+
+.header__register-btn {
+  padding: 8px 20px;
+  white-space: nowrap;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
