@@ -7,7 +7,7 @@ export default function Home({ post }) {
     <>
       <Layout>
         <main>
-          <h1>Main</h1>
+          <h1>Main Murod</h1>
         </main>
       </Layout>
     </>
