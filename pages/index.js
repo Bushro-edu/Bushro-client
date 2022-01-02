@@ -8,8 +8,7 @@ export default function Home({ post }) {
   return (
     <>
       <Layout>
-        <Courses />
-        <Mentors />
+
       </Layout>
     </>
   );
