@@ -8,7 +8,11 @@ export default function Home({ post }) {
     <>
       <Layout>
         <main>
+<<<<<<< HEAD
           <Informations />
+=======
+          <h1>Main Murod</h1>
+>>>>>>> 1b6f923cb5283bb1322c0b42f839de98daa0e3b9
         </main>
       </Layout>
     </>
