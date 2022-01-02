@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Informations from "../src/components/Informations/Informatiomns";
 import Layout from "../src/components/layout/layout";
 
 export default function Home({ post }) {
@@ -8,7 +7,7 @@ export default function Home({ post }) {
     <>
       <Layout>
         <main>
-          <Informations />
+          <h1>Main</h1>
         </main>
       </Layout>
     </>
