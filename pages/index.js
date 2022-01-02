@@ -8,7 +8,9 @@ export default function Home({ post }) {
   return (
     <>
       <Layout>
-
+        <main>
+          <h1>Main</h1>
+        </main>
       </Layout>
     </>
   );
