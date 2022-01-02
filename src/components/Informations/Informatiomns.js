@@ -1,7 +1,7 @@
 const Informations = () => {
   return (
     <>
-      <h1>Loool</h1>
+      <h1>Loool Tekshirish</h1>
     </>
   );
 };
