@@ -5,10 +5,10 @@ import Mentors from "../../src/components/Mentors/Mentors";
 const About = () => {
   return (
     <>
-      {/* <Layout> */}
+      <Layout>
         <Courses />
         <Mentors />
-      {/* </Layout> */}
+      </Layout>
     </>
   );
 };
