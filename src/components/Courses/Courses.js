@@ -1,17 +1,24 @@
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
+import React, { useState } from 'react';
 
 import nextBtnIcon from '../../assets/images/next.svg'
 import prevBtnIcon from '../../assets/images/prev.svg'
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 function Courses() {
+   const [SlidesCount, setSlidesCount] = useState(3)
 
+   React.useEffect(() => {
+      if (window.innerWidth < 450) {
+         setSlidesCount(1);
+      } else if (window.innerWidth < 800) {
+         setSlidesCount(2)
+      } else {
+         setSlidesCount(3)
+      }
+   }, []);
 
    const courses = [
       {
@@ -66,7 +73,7 @@ function Courses() {
                <Swiper className='courses__list'
                   modules={[Navigation]}
                   spaceBetween={35}
-                  slidesPerView={3}
+                  slidesPerView={SlidesCount}
                   navigation={
                      {
                         nextEl: ".next-btn",
@@ -100,6 +107,7 @@ function Courses() {
          </section>
       </>
    )
+
 }
 
 export default Courses;

@@ -1,3 +1,8 @@
+.courses{
+	margin: 0;
+	margin-bottom: 120px;
+}
+
 .courses__heading {
 	display: block;
 	margin: 0;
@@ -13,7 +18,7 @@
 
 .courses__desc {
 	display: block;
-   width: 100%;
+	width: 100%;
 	max-width: 380px;
 	margin: 0 auto;
 	margin-bottom: 52px;
@@ -39,8 +44,8 @@
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }
 
-.coureses__item__img{
-   margin-bottom: 24px !important;
+.coureses__item__img {
+	margin-bottom: 24px !important;
 }
 
 .courses__item__info-box {
@@ -61,7 +66,7 @@
 
 .info-box__desc {
 	margin: 0;
-   margin-left: 10px;
+	margin-left: 10px;
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: normal;
@@ -83,9 +88,65 @@
 	height: 48px;
 	text-align: center;
 	background: #fdc332;
-   border: none;
+	border: none;
 }
 
 .controllers-btn:disabled {
 	background: rgba(37, 49, 49, 0.1);
+}
+
+@include media-max(940px) {
+	.courses__heading{
+		font-size: 32px;
+	}
+
+	.courses__list {
+		width: 100%;
+		max-width: 900px;
+	}
+
+	.courses__item{
+		padding-bottom: 10px;
+	}
+
+	.courses__item__info-box{
+		padding: 5px;
+	}
+
+	.info-box__heading {
+		display: block;
+		margin: 0;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 33px;
+		color: #253131;
+	}
+
+	.info-box__desc {
+		margin: 0;
+		margin-left: 10px;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 21px;
+		color: rgba(37, 49, 49, 0.7);
+	}
+}
+
+@include media-max(920px){
+	.courses__item__info-box{
+		flex-direction: column;
+		padding-left: 15px;
+	}
+
+	.coureses__item__img {
+		margin-bottom: 10px !important;
+	}
+
+	.info-box__desc{
+		margin-left: 0;
+	}
 }

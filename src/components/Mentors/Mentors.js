@@ -1,13 +1,22 @@
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import React, { useState } from 'react';
 
 import stars from '../../assets/images/stars.svg';
 
 function Mentors() {
+   const [SlidesCount, setSlidesCount] = useState(3)
+
+   React.useEffect(() => {
+      if (window.innerWidth < 450) {
+         setSlidesCount(1);
+      } else if (window.innerWidth < 800) {
+         setSlidesCount(2)
+      } else {
+         setSlidesCount(3)
+      }
+   }, []);
+
    const mentors = [
       {
          id: 1,
@@ -84,7 +93,7 @@ function Mentors() {
                <p className="courses__desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia.</p>
                <Swiper className='mentors__list'
                   spaceBetween={35}
-                  slidesPerView={3}
+                  slidesPerView={SlidesCount}
                   onSwiper={(swiper) => console.log(swiper)}
                   onSlideChange={() => console.log('slide change')}>
                   {
@@ -92,12 +101,12 @@ function Mentors() {
                         <SwiperSlide className='mentors__item' key={e.id}>
                            <Image className='coureses__item__img' src={e.img} alt='template' width='390' height='200' />
                            <div className='info-box'>
-                           <h3 className='info-box__heading info-box__heading--margin'>{e.name}</h3>
-                           <p className='info-box__desc info-box__desc--margin'>{e.description}</p>
+                              <h3 className='info-box__heading info-box__heading--margin'>{e.name}</h3>
+                              <p className='info-box__desc info-box__desc--margin'>{e.description}</p>
                               <span className='info-box-star'>
                                  <Image src={stars} alt='stars' width='105' height='16' />
                               </span>
-                              <span className='info-box__desc'>{e.reviews}</span>
+                              <span className='info-box__desc  info-box__desc--mobile'>{e.reviews}</span>
                            </div>
                         </SwiperSlide>
                      ))

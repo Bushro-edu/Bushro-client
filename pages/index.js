@@ -1,15 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
+import Informations from "../src/components/Informations/Informations";
+import PassTests from "../src/components/PassTests/PassTests";
 import Layout from "../src/components/layout/layout";
-import Courses from "../src/components/Courses/Courses";
-import Mentors from "../src/components/Mentors/Mentors";
 
 export default function Home({ post }) {
   return (
     <>
+      <Head>
+        <title>Bushro academy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Layout>
         <main>
-          <h1>Main</h1>
+          <Informations />
+          <PassTests />
         </main>
       </Layout>
     </>

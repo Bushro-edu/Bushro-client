@@ -20,7 +20,7 @@
 	--swiper-theme-color: #007aff;
 }
 .swiper {
-	width: 1400px;
+	width: 1250px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -619,8 +619,3 @@ button.swiper-pagination-bullet {
 	backface-visibility: hidden;
 	overflow: hidden;
 }
-
-//  @include media-max(940x){
-//    .swiper {
-//       width: 900px !important;
-//  }
