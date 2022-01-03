@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Informations from "../src/components/Informations/Informations";
+import PassTests from "../src/components/PassTests/PassTests";
 import Layout from "../src/components/layout/layout";
 
 export default function Home({ post }) {
@@ -13,6 +14,7 @@ export default function Home({ post }) {
       <Layout>
         <main>
           <Informations />
+          <PassTests />
         </main>
       </Layout>
     </>
